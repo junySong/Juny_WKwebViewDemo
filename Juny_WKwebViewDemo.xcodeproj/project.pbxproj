@@ -11,6 +11,7 @@
 		3693499B65A72A958324CA38 /* libPods-Juny_WKwebViewDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06841FBBC5CFC33E61D19EC0 /* libPods-Juny_WKwebViewDemo.a */; };
 		8B6AC1111FCFDCF50014A97F /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = 8B6AC10E1FCFDCF50014A97F /* test.html */; };
 		8B6AC1121FCFDCF50014A97F /* WKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8B6AC1101FCFDCF50014A97F /* WKWebViewController.m */; };
+		8B7F01C01FD0FC2E00CDA47B /* WKwebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B7F01BE1FD0FC2E00CDA47B /* WKwebViewController.swift */; };
 		8BDBFB6E1F96F519003310AE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BDBFB6D1F96F519003310AE /* main.m */; };
 		8BDBFB711F96F519003310AE /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BDBFB701F96F519003310AE /* AppDelegate.m */; };
 		8BDBFB741F96F519003310AE /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BDBFB731F96F519003310AE /* ViewController.m */; };
@@ -49,6 +50,8 @@
 		8B6AC10F1FCFDCF50014A97F /* WKWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewController.h; sourceTree = "<group>"; };
 		8B6AC1101FCFDCF50014A97F /* WKWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewController.m; sourceTree = "<group>"; };
 		8B6AC1131FCFDEB50014A97F /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8B7F01BD1FD0FC2E00CDA47B /* Juny_WKwebViewDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Juny_WKwebViewDemo-Bridging-Header.h"; sourceTree = "<group>"; };
+		8B7F01BE1FD0FC2E00CDA47B /* WKwebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WKwebViewController.swift; sourceTree = "<group>"; };
 		8BDBFB691F96F519003310AE /* Juny_WKwebViewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Juny_WKwebViewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8BDBFB6D1F96F519003310AE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8BDBFB6F1F96F519003310AE /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -129,6 +132,8 @@
 				8B6AC10E1FCFDCF50014A97F /* test.html */,
 				8B6AC10F1FCFDCF50014A97F /* WKWebViewController.h */,
 				8B6AC1101FCFDCF50014A97F /* WKWebViewController.m */,
+				8B7F01BE1FD0FC2E00CDA47B /* WKwebViewController.swift */,
+				8B7F01BD1FD0FC2E00CDA47B /* Juny_WKwebViewDemo-Bridging-Header.h */,
 			);
 			path = WKWebView;
 			sourceTree = "<group>";
@@ -276,6 +281,7 @@
 					8BDBFB681F96F519003310AE = {
 						CreatedOnToolsVersion = 8.3.3;
 						DevelopmentTeam = PA2V7TLZSR;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
 					8BDBFB841F96F519003310AE = {
@@ -484,6 +490,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B6AC1121FCFDCF50014A97F /* WKWebViewController.m in Sources */,
+				8B7F01C01FD0FC2E00CDA47B /* WKwebViewController.swift in Sources */,
 				8BDBFB7A1F96F519003310AE /* Juny_WKwebViewDemo.xcdatamodeld in Sources */,
 				8BDBFB741F96F519003310AE /* ViewController.m in Sources */,
 				8BDBFB711F96F519003310AE /* AppDelegate.m in Sources */,
@@ -639,11 +646,15 @@
 			baseConfigurationReference = C1660833A6C725EF1DCFC4D4 /* Pods-Juny_WKwebViewDemo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = PA2V7TLZSR;
 				INFOPLIST_FILE = Juny_WKwebViewDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Juny.Juny-WKwebViewDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Juny_WKwebViewDemo/WKWebView/Juny_WKwebViewDemo-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -652,11 +663,14 @@
 			baseConfigurationReference = FF553A9033167113EA9DA401 /* Pods-Juny_WKwebViewDemo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = PA2V7TLZSR;
 				INFOPLIST_FILE = Juny_WKwebViewDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Juny.Juny-WKwebViewDemo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Juny_WKwebViewDemo/WKWebView/Juny_WKwebViewDemo-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
@@ -664,6 +678,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A79E12A70FB3758E34D7A730 /* Pods-Juny_WKwebViewDemoTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = PA2V7TLZSR;
 				INFOPLIST_FILE = Juny_WKwebViewDemoTests/Info.plist;
@@ -678,6 +693,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2397DAAA9E1741C33653C199 /* Pods-Juny_WKwebViewDemoTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				DEVELOPMENT_TEAM = PA2V7TLZSR;
 				INFOPLIST_FILE = Juny_WKwebViewDemoTests/Info.plist;
@@ -692,6 +708,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2D72943527A6D00E238560C2 /* Pods-Juny_WKwebViewDemoUITests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = PA2V7TLZSR;
 				INFOPLIST_FILE = Juny_WKwebViewDemoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -705,6 +722,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A41D99B308723186DE3E56B3 /* Pods-Juny_WKwebViewDemoUITests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = PA2V7TLZSR;
 				INFOPLIST_FILE = Juny_WKwebViewDemoUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";

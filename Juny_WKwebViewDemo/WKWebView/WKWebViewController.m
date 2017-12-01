@@ -48,7 +48,7 @@
     //自定义配置,一般用于 js调用oc方法(OC拦截URL中的数据做自定义操作)
     WKUserContentController * UserContentController = [[WKUserContentController alloc]init];
     // 添加消息处理，注意：self指代的对象需要遵守WKScriptMessageHandler协议，结束时需要移除
-    [UserContentController addScriptMessageHandler:self name:@"WXPay"];
+    [UserContentController addScriptMessageHandler:self name:@"fuction1"];
     // 是否支持记忆读取
     Configuration.suppressesIncrementalRendering = YES;
     // 允许用户更改网页的设置
@@ -164,15 +164,12 @@
  */
 - (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(nonnull WKScriptMessage *)message{
     //message.name,message.body,message.frameInfo
-    if ([message.name isEqualToString:@"removeSelf"]) {
+    if ([message.name isEqualToString:@"fuction1"]) {
         dispatch_async(dispatch_get_main_queue(), ^{
-            
-         
-            
+            NSLog(@"----funtionName----%@--%@",message.name,message.body);
         });
         
-        
-        // NSDictionary, and NSNull类型
+   
         
     }
     
